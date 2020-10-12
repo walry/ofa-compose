@@ -1,0 +1,21 @@
+dev: true
+level: info
+encoding: console
+key:
+  name: logger
+  time: ts
+  level: level
+  caller: caller
+  message: msg
+  stacktrace: stacktrace
+encode:
+  time:
+  level:
+  duration:
+  caller: short
+outputs:
+  - stderr
+  - file
+file: app
+format: 2006-01-02
+path: logs

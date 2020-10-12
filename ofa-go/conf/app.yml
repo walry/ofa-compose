@@ -1,0 +1,4 @@
+appName: ofa
+port: 8086
+runMode: debug
+uploadsPath: storage/uploads

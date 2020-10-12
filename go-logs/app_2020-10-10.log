@@ -1,0 +1,6 @@
+2020-10-10 18:38:42	info	app	models/base.go:16	创建ofa_company_state_detail表：dial tcp 172.25.0.4:3306: connect: connection refused
+2020-10-10 18:38:42	info	app	models/base.go:22	创建ofa_company_info表:dial tcp 172.25.0.4:3306: connect: connection refused
+2020-10-10 18:38:42	info	app	models/base.go:27	创建ofa_industry_info表:dial tcp 172.25.0.4:3306: connect: connection refused
+2020-10-10 18:38:42	info	app	models/base.go:33	创建ofa_custom_group_info表：dial tcp 172.25.0.4:3306: connect: connection refused
+2020-10-10 18:38:42	info	app	models/base.go:39	创建ofa_company_state_info表：dial tcp 172.25.0.4:3306: connect: connection refused
+2020-10-10 18:38:42	info	app	ofa/main.go:67	http server listen on:0.0.0.0:8086

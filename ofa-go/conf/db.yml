@@ -1,0 +1,11 @@
+adapter: mysql
+db:
+  default:
+    openConns: 20
+    idleConns: 5
+    maxLifetime: 10
+    prefix: "ofa_"
+    master:
+      "root:root@tcp(172.25.0.4:3307)/ofa?loc=UTC&charset=utf8mb4"
+    slaves:
+      - "root:root@tcp(172.25.0.4:3307)/ofa?loc=UTC&charset=utf8mb4"

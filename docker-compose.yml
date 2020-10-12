@@ -1,0 +1,50 @@
+version: '3'
+services:
+    ofa-ui:
+        container_name: ofa-ui
+        build:
+            context: ./ofa-ui
+            dockerfile: Dockerfile
+        ports:
+            - 8085:8080
+        networks:
+            ofa-net:
+                ipv4_address: 172.25.0.3
+        depends_on:
+            - ofa-go
+        volumes:
+            - ./nginx-logs/:/var/log/nginx
+            
+    ofa-go:
+        container_name: ofa-go
+        build:
+            context: ./ofa-go
+            dockerfile: Dockerfile
+        ports:
+            - 8086:8086
+        networks:
+            ofa-net:
+                ipv4_address: 172.25.0.2
+        volumes:
+            - ./go-logs/:/usr/src/ofa/logs
+            - ./go-storage/:/usr/src/ofa/storage
+            
+    ofa-db:
+        image: mysql:5.6
+        container_name: ofa-db
+        ports:
+            - 3307:3306
+        networks:
+            ofa-net:
+                ipv4_address: 172.25.0.4
+        volumes:
+            - ./mysql/data/:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            
+            
+networks:
+    ofa-net:
+        external: true
+        
+        
