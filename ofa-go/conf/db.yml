@@ -6,6 +6,6 @@ db:
     maxLifetime: 10
     prefix: "ofa_"
     master:
-      "root:root@tcp(172.25.0.4:3307)/ofa?loc=UTC&charset=utf8mb4"
+      "root:root@tcp(192.168.4.161:3309)/ofa?loc=UTC&charset=utf8mb4"
     slaves:
-      - "root:root@tcp(172.25.0.4:3307)/ofa?loc=UTC&charset=utf8mb4"
+      - "root:root@tcp(192.168.4.161:3309)/ofa?loc=UTC&charset=utf8mb4"

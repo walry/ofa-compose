@@ -64,5 +64,8 @@ func routeList(g *gin.Engine)  {
 	v1.GET("/finance/statement/data",services.GetCompanyStatement)
 
 	v1.GET("/rpc",services.TestRpc)
+
+	//分析
+	v1.GET("/analysis/source",services.GetAnalysisSourceData)
 }
 
